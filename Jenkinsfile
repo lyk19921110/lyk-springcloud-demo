@@ -14,7 +14,7 @@ node {
 
       stage('编译-打包-构建docker镜像-上传镜像到harbor-') { // for display purposes
          sh "mvn -f ${project_name} clean package dockerfile:build"
-         def imageName=${project_name}:${tag}
+         def imageName="${project_name}:${tag}"
          //打标签
          sh "docker tag ${imageName} ${harbor_url}/${harbor_project}/${imageName}"
          //把镜像推送搭配harbor

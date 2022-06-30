@@ -8,7 +8,7 @@ node {
         checkout([$class: 'GitSCM', branches: [[name: "*/${branch}"]], extensions: [], userRemoteConfigs: [[credentialsId:"${git_auth}", url:"${git_url}"]]])
     }
 
-      stage('编译打包微服务项目') { // for display purposes
+      stage('编译-打包-构建docker镜像') { // for display purposes
          sh "mvn -f ${project_name} clean package dockerfile:build"
         }
 

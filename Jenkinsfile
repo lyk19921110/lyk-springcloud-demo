@@ -9,7 +9,7 @@ node {
     }
 
       stage('编译打包微服务项目') { // for display purposes
-         sh "mvn -f ${project_name} clean package"
+         sh "mvn -f ${project_name} clean package dockerfile:build"
         }
 
 }

@@ -16,7 +16,7 @@ public class ProviderController {
     public Map<String,Object> getTest() throws InterruptedException {
         Map<String,Object> map=new HashMap<String,Object>();
         map.put("succes","provider8001");
-        Thread.sleep(5000);
+        //Thread.sleep(5000);
         return map;
     }
 }
